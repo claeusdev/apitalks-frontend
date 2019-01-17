@@ -3,7 +3,7 @@
     <nav class="top-nav">
       <div class="container nav-container">
         <p class="logo">
-          <router-link :to="{name: 'HelloWorld'}">
+          <router-link to="/">
             Starbucks Locator
           </router-link>
           </p>
