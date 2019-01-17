@@ -1,12 +1,19 @@
 <template>
-  <header class="container">
+  <header>
     <nav class="top-nav">
-      <p>Starbucks Locator</p>
-      <ul class="nav-link">
-        <li>Signed in as {{currentUser.email}}</li>
-        <li><a @click="logout">Logout</a></li>
+      <div class="container nav-container">
+        <p class="logo">
+          <router-link :to="{name: 'HelloWorld'}">
+            Starbucks Locator
+          </router-link>
+          </p>
+        <ul class="nav-links">
+          <li>Signed in as {{currentUser.email}}</li>
+          <li><a @click="logout" class="button small">Logout</a></li>
 
-      </ul>
+        </ul>
+      </div>
+
     </nav>
   </header>
 </template>
@@ -30,17 +37,12 @@
 </script>
 
 <style lang="scss">
-  .container {
-    box-sizing: border-box;
-    margin: 0 auto;
-    max-width: 1280px;
-    min-width: 310px;
-    padding: 0 20px;
-    position: relative;
-    width: 100%;
-  }
-  .top-nav {
-    display: flex;
-    justify-content: space-between;
+  .logo {
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
   }
 </style>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Auth from '@/components/Auth'
 import Home from '@/components/Home'
+import StoreShow from '@/components/StoreShow'
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -24,6 +25,14 @@ let router = new Router({
       }
     },
     {
+      path: '/store/:id',
+      name: 'StoreShow',
+      component: StoreShow,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
       path: '/auth',
       name: 'Auth',
       component: Auth
@@ -36,7 +45,7 @@ router.beforeEach((to, from, next) => {
   const currentUser = firebase.auth().currentUser
 
   if (requiresAuth && !currentUser) {
-    next('/login')
+    next('/auth')
   } else if (requiresAuth && currentUser) {
     next()
   } else {

@@ -18,18 +18,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Abril Fatface', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: black;
-  
-}
+  @import './assets/scss/app.scss';
 
 </style>

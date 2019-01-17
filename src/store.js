@@ -10,7 +10,8 @@ auth.onAuthStateChanged((user) => {
 })
 export const store = new Vuex.Store({
   state: {
-    currentUser: null
+    currentUser: null,
+    stores: []
   },
   actions: {
     clearData ({ commit }) {
@@ -20,6 +21,9 @@ export const store = new Vuex.Store({
   mutations: {
     setCurrentUser (state, val) {
       state.currentUser = val
+    },
+    setStores (state, val) {
+      state.stores = val
     }
   }
 })
