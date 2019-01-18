@@ -9,6 +9,11 @@
           </p>
         <ul class="nav-links">
           <li>Signed in as {{currentUser.email}}</li>
+          <li>
+            <router-link to="/contact">
+              Contact us
+            </router-link>
+            </li>
           <li><a @click="logout" class="button small">Logout</a></li>
 
         </ul>

@@ -20,7 +20,6 @@
 
         <h3><i class="icon ion-md-call">
         </i> {{store.phoneNumber}}</h3>
-        
       </div>
     </div>
   </div>
@@ -36,7 +35,13 @@ export default {
   },
   methods: {
     fetchStore (id) {
-      axios.get(`https://912kgb8em7.execute-api.us-east-1.amazonaws.com/dev/shops/${id}`)
+      axios
+        .get(`https://912kgb8em7.execute-api.us-east-1.amazonaws.com/dev/shops/${id}`,
+        {
+          headers: {
+            'x-api-key': 'UtlnFHAHf64AhpJRzCflf2tS9gumOJa55gGikcIm'
+          }
+        })
       .then(res => {
         console.log(res.data)
         this.store = res.data.store

@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Auth from '@/components/Auth'
 import Home from '@/components/Home'
 import StoreShow from '@/components/StoreShow'
+import Contact from '@/components/Contact'
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -36,6 +37,11 @@ let router = new Router({
       path: '/auth',
       name: 'Auth',
       component: Auth
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
     }
   ]
 })
