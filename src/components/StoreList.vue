@@ -10,19 +10,6 @@
         v-for="store in searchedStores" :store="store" :key="store.id"/>
     </div>
     <hr>
-    <ul>
-      <li v-for="p in paginatedData" :key="p.id">
-        {{p.first}}
-        {{p.last}}
-        {{p.suffix}}
-      </li>
-    </ul>
-    <button @click="prevPage">
-      Previous
-    </button>
-    <button @click="nextPage">
-      Next
-    </button>
   </div>
 </template>
 
@@ -32,19 +19,13 @@
     components: { StoreListItem },
     data () {
       return {
-        searchTerm: '',
-        pageNumber: 0
+        searchTerm: ''
       }
     },
     props: {
       stores: {
         required: true,
         type: Array
-      },
-      size: {
-        type: Number,
-        required: false,
-        default: 10
       }
     },
     computed: {
@@ -52,24 +33,6 @@
         return this.stores.filter(store => {
           return store.city.match(this.searchTerm) || store.storeName.match(this.searchTerm)
         })
-      },
-      pageCount () {
-        const l = this.stores.length
-        const s = this.size
-        return Math.ceil(l / s)
-      },
-      paginatedData () {
-        const start = this.pageNumber * this.size
-        const end = start + this.size
-        return this.stores.slice(start, end)
-      }
-    },
-    methods: {
-      nextPage () {
-        this.pageNumber++
-      },
-      prevPage () {
-        this.pageNumber--
       }
     }
   }

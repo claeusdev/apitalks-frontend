@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import firebase from 'firebase'
 import { store } from './store.js'
-
 import './firebaseInit'
 
 Vue.config.productionTip = false
