@@ -36,10 +36,10 @@ export default {
   methods: {
     fetchStore (id) {
       axios
-        .get(`https://912kgb8em7.execute-api.us-east-1.amazonaws.com/dev/shops/${id}`,
+        .get(`https://vk9ok52qwl.execute-api.us-east-1.amazonaws.com/dev/shops/${id}`,
         {
           headers: {
-            'x-api-key': 'UtlnFHAHf64AhpJRzCflf2tS9gumOJa55gGikcIm'
+            'x-api-key': 'Swb2DQNEvJ4kgsLqEkIxpAAKyK8WVO7MqYBWPe00'
           }
         })
       .then(res => {

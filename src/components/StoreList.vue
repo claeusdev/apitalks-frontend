@@ -6,7 +6,8 @@
       </div>
     </div>
     <div class="stores">
-      <StoreListItem
+      
+        <StoreListItem
         v-for="store in searchedStores" :store="store" :key="store.id"/>
     </div>
     <hr>
@@ -19,7 +20,8 @@
     components: { StoreListItem },
     data () {
       return {
-        searchTerm: ''
+        searchTerm: '',
+        paginate: ['stores']
       }
     },
     props: {

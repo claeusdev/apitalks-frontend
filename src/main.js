@@ -5,8 +5,11 @@ import App from './App'
 import router from './router'
 import firebase from 'firebase'
 import { store } from './store.js'
+import VuePaginate from 'vue-paginate'
+
 import './firebaseInit'
 
+Vue.use(VuePaginate)
 Vue.config.productionTip = false
 
 let app
